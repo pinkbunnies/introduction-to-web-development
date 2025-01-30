@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Encabezado y barra de navegación */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de menú hamburguesa */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Secciones principales */
+#about-me,
+#projects,
+#skills,
+#contact {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Botones de filtro en la sección de proyectos */
+#projects > div {
+    margin-bottom: 1rem;
+}
+
+/* Tarjetas de proyectos */
+#projects article {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Imágenes dentro de los proyectos */
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Lista de habilidades */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills li {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+/* Icono de verificación para las habilidades */
+#skills li::before {
+    content: "✓ ";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+/* Estilos del formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+label {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+/* Botón de envío */
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav a {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+    nav.nav-abierto a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}   
