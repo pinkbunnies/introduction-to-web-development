@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="Portafolio personal de ejemplo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Mi Portafolio Gótico</title>
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
             <a href="#projects">Proyectos</a>
             <a href="#skills">Habilidades</a>
             <a href="#contact">Contacto</a>
-            <!-- Botón de menú hamburguesa para dispositivos móviles -->
+            <!-- Botón de menú hamburguesa para pantallas pequeñas -->
             <button id="hamburger" aria-label="Menú" onclick="desplegarMenu()">☰</button>
         </nav>
     </header>
@@ -24,13 +25,23 @@
     <!-- Sección Sobre mí -->
     <section id="about-me">
         <h2>Sobre mí</h2>
-        <p>Lorem ipsum d☺olor sit amet, consectetur adipiscing elit. Integer eget accumsan lorem. Donec interdum metus a magna fringilla, volutpat rutrum quam vehicula. Vestibulum porta lobortis dui, sit amet sodales ipsum. Nulla laoreet sapien vitae tristique convallis. Nam congue tristique sapien, vel consequat ex cursus et. Quisque at ultricies diam. Quisque in dolor vitae eros molestie luctus sit amet vel libero. Etiam congue quam in imperdiet lacinia. Ut elementum ultricies lacinia. Praesent a blandit lorem. Duis a lorem sed dolor tincidunt feugiat. Vestibulum sollicitudin rutrum vestibulum.</p>
-
-        <p>Fusce at nisi tortor. Donec at metus felis. Curabitur ornare lorem sed quam lobortis, non eleifend quam aliquet. Fusce vehicula tellus vel nisi consectetur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus sed lacus et laoreet. Sed scelerisque tempor dolor eu viverra.</p>
-
-        <p>Aliquam ut mattis massa. Nulla dui enim, tristique in urna in, facilisis faucibus metus. Donec sed placerat orci. Phasellus sed nisl non mi accumsan pellentesque. In erat sapien, euismod vitae aliquet quis, pulvinar non ante. Vivamus vitae dapibus tortor. Aliquam at sapien convallis, malesuada urna a, convallis magna. Nulla accumsan diam lectus, a sagittis nibh posuere non. Duis tellus elit, condimentum ut odio sit amet, pharetra vehicula erat.</p>
-
-        <p>Vivamus convallis ipsum auctor massa commodo mollis. Donec blandit mi eros, et pretium odio hendrerit nec. Quisque scelerisque lorem sed mauris pulvinar euismod. Nam placerat, lorem in ultricies dapibus, orci dolor finibus ante, sit amet malesuada tortor eros dapibus nibh. Sed a urna tellus. Integer porttitor justo ut tortor ullamcorper pulvinar. Maecenas tempor, est vel tempus maximus, mauris dui suscipit tellus, faucibus consequat massa nisi quis augue.</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget accumsan lorem.
+            Donec interdum metus a magna fringilla, volutpat rutrum quam vehicula. Vestibulum porta
+            lobortis dui, sit amet sodales ipsum. Nulla laoreet sapien vitae tristique convallis.
+        </p>
+        <p>
+            Fusce at nisi tortor. Donec at metus felis. Curabitur ornare lorem sed quam lobortis,
+            non eleifend quam aliquet. Fusce vehicula tellus vel nisi consectetur volutpat.
+        </p>
+        <p>
+            Aliquam ut mattis massa. Nulla dui enim, tristique in urna in, facilisis faucibus metus.
+            Donec sed placerat orci. Phasellus sed nisl non mi accumsan pellentesque.
+        </p>
+        <p>
+            Vivamus convallis ipsum auctor massa commodo mollis. Donec blandit mi eros, et pretium odio hendrerit nec.
+            Quisque scelerisque lorem sed mauris pulvinar euismod.
+        </p>
     </section>
 
     <!-- Sección de Proyectos -->
@@ -41,32 +52,43 @@
             <button onclick="filtrarProyectos('todos')">Todos</button>
             <button onclick="filtrarProyectos('categoria1')">Categoría 1</button>
             <button onclick="filtrarProyectos('categoria2')">Categoría 2</button>
-        </div>                              
-        <!-- Proyecto 1 -->
-        <article data-categoria="categoria1">
-            <figure>
-                <img src="dog3d.jpg" alt="Captura de pantalla del Proyecto 1">
-                <figcaption>Proyecto 1</figcaption>
-            </figure>
-            <p>Fusce at nisi tortor. Donec at metus felis. Curabitur ornare lorem sed quam lobortis, non eleifend quam aliquet. Fusce vehicula tellus vel nisi consectetur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus sed lacus et laoreet. Sed scelerisque tempor dolor eu viverra.</p>
+        </div>
 
-        </article>
-        <!-- Proyecto 2 -->
-        <article data-categoria="categoria2">
-            <figure>
-                <img src="dog3d.jpg" alt="Captura de pantalla del Proyecto 2">
-                <figcaption>Proyecto 2</figcaption>
-            </figure>
-            <p>Aliquam ut mattis massa. Nulla dui enim, tristique in urna in, facilisis faucibus metus. Donec sed placerat orci. Phasellus sed nisl non mi accumsan pellentesque. In erat sapien, euismod vitae aliquet quis, pulvinar non ante. Vivamus vitae dapibus tortor. Aliquam at sapien convallis, malesuada urna a, convallis magna. Nulla accumsan diam lectus, a sagittis nibh posuere non. Duis tellus elit, condimentum ut odio sit amet, pharetra vehicula erat.</p>
-        </article>
-        <!-- Proyecto 3 -->
-        <article data-categoria="categoria2">
-            <figure>
-                <img src="dog3d.jpg" alt="Captura de pantalla del Proyecto 2">
-                <figcaption>Proyecto 3</figcaption>
-            </figure>
-            <p>Vivamus convallis ipsum auctor massa commodo mollis. Donec blandit mi eros, et pretium odio hendrerit nec. Quisque scelerisque lorem sed mauris pulvinar euismod. Nam placerat, lorem in ultricies dapibus, orci dolor finibus ante, sit amet malesuada tortor eros dapibus nibh. Sed a urna tellus. Integer porttitor justo ut tortor ullamcorper pulvinar. Maecenas tempor, est vel tempus maximus, mauris dui suscipit tellus, faucibus consequat massa nisi quis augue.</p>
-        </article>
+        <!-- Contenedor para organizar los artículos en un grid -->
+        <div class="projects-grid">
+            <!-- Proyecto 1 -->
+            <article data-categoria="categoria1">
+                <figure>
+                    <img src="dog3d.jpg" alt="Captura de pantalla del Proyecto 1">
+                    <figcaption>Proyecto 1</figcaption>
+                </figure>
+                <p>
+                    Fusce at nisi tortor. Donec at metus felis. Curabitur ornare lorem sed quam lobortis,
+                    non eleifend quam aliquet. Fusce vehicula tellus vel nisi consectetur volutpat.
+                </p>
+            </article>
+            <!-- Proyecto 2 -->
+            <article data-categoria="categoria2">
+                <figure>
+                    <img src="dog3d.jpg" alt="Captura de pantalla del Proyecto 2">
+                    <figcaption>Proyecto 2</figcaption>
+                </figure>
+                <p>
+                    Aliquam ut mattis massa. Nulla dui enim, tristique in urna in, facilisis faucibus metus.
+                    Donec sed placerat orci. Phasellus sed nisl non mi accumsan pellentesque.
+                </p>
+            </article>
+            <!-- Proyecto 3 -->
+            <article data-categoria="categoria2">
+                <figure>
+                    <img src="dog3d.jpg" alt="Captura de pantalla del Proyecto 3">
+                    <figcaption>Proyecto 3</figcaption>
+                </figure>
+                <p>
+                    Vivamus convallis ipsum auctor massa commodo mollis. Donec blandit mi eros, et pretium odio hendrerit nec.
+                </p>
+            </article>
+        </div>
     </section>
 
     <!-- Sección de Habilidades -->
@@ -87,10 +109,13 @@
         <form onsubmit="validarFormulario(event)">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
+
             <label for="correo">Correo electrónico</label>
             <input type="email" id="correo" name="correo" required>
+
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" required></textarea>
+
             <button type="submit">Enviar</button>
         </form>
     </section>

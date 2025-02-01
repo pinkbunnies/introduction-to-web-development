@@ -1,14 +1,25 @@
-/* Estilos generales */
+/* Importa fuentes con estilo gótico (UnifrakturMaguntia) y serif (EB Garamond) */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=UnifrakturMaguntia&display=swap');
+
+/* Aplica fuente, colores y fondo oscuro a toda la página */
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-color: #f5f5f5;
+    background-color: #111;
+    color: #e0e0e0;
+    font-family: 'EB Garamond', serif;
 }
 
-/* Encabezado y barra de navegación */
+/* Asigna la fuente gótica y el color principal a los encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'UnifrakturMaguntia', cursive;
+    color: #b22222;
+    margin-bottom: 1rem;
+}
+
+/* Da estilo al contenedor principal del encabezado y la barra de navegación */
 header {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -16,55 +27,92 @@ header {
     padding: 1rem;
 }
 
+/* Establece la apariencia de los enlaces de la navegación */
 nav a {
     color: #fff;
     text-decoration: none;
     margin-right: 1rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
 }
 
+/* Sube la jerarquía visual de los enlaces al pasar el mouse */
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Botón de menú hamburguesa */
+/* Define el botón de menú hamburguesa y lo oculta en pantallas grandes */
 #hamburger {
     display: none;
     background: none;
     border: none;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-/* Secciones principales */
-#about-me,
-#projects,
-#skills,
-#contact {
+/* Configura la apariencia general de las secciones */
+section {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
 }
 
-/* Botones de filtro en la sección de proyectos */
-#projects > div {
-    margin-bottom: 1rem;
+/* Ajusta el estilo de los párrafos dentro de cada sección */
+section p {
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
 }
 
-/* Tarjetas de proyectos */
-#projects article {
-    background-color: #fff;
-    border: 1px solid #ccc;
+/* Estiliza los botones de filtro en la sección de proyectos */
+#projects > div button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    font-family: 'EB Garamond', serif;
+}
+
+/* Cambia el color del botón de filtro al pasar el mouse */
+#projects > div button:hover {
+    background-color: #b22222;
+    border-color: #b22222;
+}
+
+/* Organiza los artículos en un grid responsive para la sección de proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Da estilo individual a cada artículo (tarjeta de proyecto) */
+.projects-grid article {
+    background-color: #1c1c1c;
+    border: 1px solid #444;
     padding: 1rem;
-    margin-bottom: 1rem;
+    border-radius: 4px;
 }
 
-/* Imágenes dentro de los proyectos */
+/* Ajusta la imagen dentro de cada tarjeta de proyecto */
 figure img {
     max-width: 100%;
     height: auto;
+    border: 2px solid #444;
 }
 
-/* Lista de habilidades */
+/* Añade estilo a la leyenda de cada imagen */
+figcaption {
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Elimina la viñeta en la lista de habilidades y define el espaciado */
 #skills ul {
     list-style-type: none;
     padding: 0;
@@ -74,58 +122,73 @@ figure img {
     margin: 0.5rem 0;
     padding-left: 2rem;
     position: relative;
+    font-size: 1.1rem;
 }
 
-/* Icono de verificación para las habilidades */
+/* Añade un símbolo de estrella antes de cada habilidad */
 #skills li::before {
-    content: "✓ ";
+    content: "✦ ";
     position: absolute;
     left: 0;
-    color: #333;
+    color: #b22222;
 }
 
-/* Estilos del formulario de contacto */
+/* Define el estilo del formulario de contacto */
 form {
     display: flex;
     flex-direction: column;
     max-width: 600px;
 }
 
+/* Ajusta el espaciado de las etiquetas de los campos del formulario */
 label {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
+/* Aplica estilo a los campos de entrada y al textarea */
 input,
 textarea {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 2px;
 }
 
-/* Botón de envío */
-button {
+/* Estilo del botón de enviar en el formulario */
+button[type="submit"] {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: #333;
     color: #fff;
-    border: none;
+    border: 1px solid #444;
     cursor: pointer;
+    font-family: 'EB Garamond', serif;
 }
 
-button:hover {
-    background-color: #555;
+/* Cambia el color del botón de enviar al pasar el mouse */
+button[type="submit"]:hover {
+    background-color: #b22222;
+    border-color: #b22222;
 }
 
-/* Media query para pantallas pequeñas */
+/* Ajusta la navegación y el layout para pantallas más pequeñas */
 @media (max-width: 768px) {
+    /* Oculta los enlaces de navegación y muestra el botón de menú hamburguesa */
     nav a {
         display: none;
     }
     #hamburger {
         display: block;
     }
+    /* Muestra los enlaces de navegación cuando se active el menú */
     nav.nav-abierto a {
         display: block;
         margin: 0.5rem 0;
     }
-}   
+    /* Cambia el grid de 3 columnas a 1 columna para pantallas pequeñas */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
